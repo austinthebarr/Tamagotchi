@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tamagotchi's Status</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <style>
+    body
+    {
+      background-color: lightgreen;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tamagotchi's Status</h1>
+      <p>@Model.GetName()</p>
+      <p>Food: @Model.GetFood()</p>
+      <p>Attention: @Model.GetAttention()</p>
+      <p>Sleep: @Model.GetRest()</p>
+
+
+      <form action="/Tamagotchi/feed" method="post">
+        <button type="submit">Feed</button>
+      </form><br>
+
+      <form action="/Tamagotchi/play" method="post">
+        <button type="submit">Play</button>
+      </form><br>
+
+      <form action="/Tamagotchi/sleep" method="post">
+        <button type="submit">Sleep</button>
+      </form><br>
+
+
+      <a href="/">Home</a>
+    </div>
+  </body>
+</html>
